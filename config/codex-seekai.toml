@@ -1,0 +1,137 @@
+# =============================================================================
+# Codex Config — NVIDIA API Proxy + Provider SeekAI
+# =============================================================================
+# Lokasi yang BENAR:
+#   ~/.codex/config.toml   (user-level)  <-- provider & auth WAJIB di sini
+#   JANGAN di .codex/config.toml project-level (Codex akan ignore model_provider
+#   dan model_providers di project-level)
+#
+# Cara pakai (API key langsung di config, tanpa export):
+#   1. Copy file ini ke ~/.codex/config.toml
+#      cp codex-seekai.toml ~/.codex/config.toml
+#   2. Tidak perlu export — key sudah di-hardcode di experimental_bearer_token
+#      (API_KEY .env:46 = sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc)
+#   3. Jalankan: codex
+#   4. Ganti model on-the-fly: /model nvidia-api/seekai/deepseek-v4-pro
+#
+# Base URL: 100% via proxy nvidia-api (konsisten base_url + api_key proxy)
+#   VPS IP: http://43.153.225.102:3000/v1
+#   Keuntungan: multi-key round-robin, failover, cooldown 60s, load balancing
+#   semua SEEKAI_API_KEY_1..17 di .env:277 otomatis dikelola proxy.
+#   TIDAK pakai https://seekai.cc/v1 langsung — itu direct tanpa proxy.
+#   Lokal tetap bisa pakai http://localhost:3000/v1 jika codex di VPS yang sama.
+#
+# Catatan wire_api:
+#   Sejak Februari 2026 Codex hanya support wire_api = "responses".
+#   Nilai "chat" sudah dihapus. Proxy nvidia-api sudah bridge /responses
+#   ke /chat/completions jadi tetap kompatibel.
+# =============================================================================
+
+# --- Model default (akan dipakai saat codex start) ---
+# Format routing proxy: <provider>/<model-id> ATAU tanpa prefix (proxy auto-resolve)
+# SeekAI LIVE catalog 2026-08-31 (GET https://seekai.cc/v1/models):
+#   deepseek-v4-pro, glm-5-2, grok-4-6, claude-opus-5, claude-fable-5,
+#   claude-sonnet-5, claude-opus-4-8, gemini-3-6-flash, gpt-5.6-sol
+# Fallback catalog (src/providers/seekai/models.ts:6):
+#   deepseek-v4-flash, deepseek-chat, deepseek-reasoner, deepseek-r1, dll
+# Proxy ModelRegistry strip prefix, jadi BOTH works: "deepseek-v4-pro" == "seekai/deepseek-v4-pro"
+model = "deepseek-v4-pro"
+model_provider = "nvidia-api"
+
+# Optional: konteks window (biarkan default jika tidak yakin)
+# model_context_window = 128000
+
+# =============================================================================
+# Provider: NVIDIA API Proxy — 100% proxy, model SeekAI via proxy
+# base_url dan api_key KONSISTEN proxy (bukan seekai direct)
+# =============================================================================
+[model_providers.nvidia-api]
+name = "NVIDIA API Proxy (SeekAI) - VPS 43.153.225.102"
+# base_url WAJIB proxy VPS, bukan https://seekai.cc/v1 dan bukan localhost
+# VPS IP publik terdeteksi: 43.153.225.102
+# - VPS:   http://43.153.225.102:3000/v1  (dipakai sekarang)
+# - lokal (jika codex di VPS yang sama): http://localhost:3000/v1
+# - domain: https://api.example.com/v1
+base_url = "http://43.153.225.102:3000/v1"
+# API key langsung di config (tanpa export) — pakai experimental_bearer_token
+# Nilai = API_KEY di .env:46, BUKAN SEEKAI_API_KEY_1..17 (.env:277 dikelola proxy)
+experimental_bearer_token = "sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc"
+wire_api = "responses"
+requires_openai_auth = false
+request_max_retries = 4
+stream_max_retries = 5
+stream_idle_timeout_ms = 120000
+# SeekAI generation bisa lama, timeout disamakan dengan SEEKAI_TIMEOUT=120000 di .env:303
+
+# =============================================================================
+# Provider 2: SeekAI Direct (DISABLED — jangan pakai jika lewat proxy)
+# =============================================================================
+# Jika kamu pakai proxy nvidia-api di atas, key SeekAI (SEEKAI_API_KEY_1..17
+# di .env:277) sudah dikelola OTOMATIS oleh proxy (round-robin + failover).
+# Codex TIDAK perlu tau SEEKAI_API_KEY sama sekali — cukup CODEX_API_KEY
+# untuk auth ke proxy. Blok di bawah hanya untuk direct tanpa proxy.
+# Untuk direct: uncomment dan ganti model_provider = "seekai"
+# -----------------------------------------------------------------------------
+# [model_providers.seekai]
+# name = "SeekAI Direct"
+# base_url = "https://seekai.cc/v1"
+# env_key = "SEEKAI_API_KEY"
+# env_key_instructions = "Ambil dari https://seekai.cc — contoh: export SEEKAI_API_KEY=sk-xxx"
+# wire_api = "responses"
+# requires_openai_auth = false
+# request_max_retries = 4
+# stream_max_retries = 5
+# stream_idle_timeout_ms = 120000
+
+# =============================================================================
+# Profiles — ganti model cepat tanpa edit file (pakai: codex --profile <name>)
+# =============================================================================
+# Semua profile di bawah tetap pakai provider nvidia-api (via proxy)
+
+[profiles.seekai-pro]
+model = "deepseek-v4-pro"
+model_provider = "nvidia-api"
+model_reasoning_effort = "high"
+
+[profiles.seekai-flash]
+model = "deepseek-v4-flash"
+model_provider = "nvidia-api"
+model_reasoning_effort = "medium"
+
+[profiles.seekai-glm52]
+model = "glm-5-2"
+model_provider = "nvidia-api"
+
+[profiles.seekai-grok46]
+model = "grok-4-6"
+model_provider = "nvidia-api"
+
+[profiles.seekai-gemini36]
+model = "gemini-3-6-flash"
+model_provider = "nvidia-api"
+
+[profiles.seekai-gpt56sol]
+model = "gpt-5.6-sol"
+model_provider = "nvidia-api"
+
+[profiles.claude-opus-48]
+model = "claude-opus-4-8"
+model_provider = "nvidia-api"
+
+[profiles.claude-opus-5]
+model = "claude-opus-5"
+model_provider = "nvidia-api"
+model_reasoning_effort = "high"
+
+[profiles.claude-sonnet-5]
+model = "claude-sonnet-5"
+model_provider = "nvidia-api"
+
+[profiles.claude-fable-5]
+model = "claude-fable-5"
+model_provider = "nvidia-api"
+
+# Direct SeekAI profile (tanpa proxy) — DISABLED, uncomment jika pakai direct
+# [profiles.seekai-direct-flash]
+# model = "deepseek-v4-flash"
+# model_provider = "seekai"

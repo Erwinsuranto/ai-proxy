@@ -1,0 +1,103 @@
+{
+  "model": "coding",
+  "models": [
+    {
+      "id": "claude-opus-4-8",
+      "object": "model",
+      "created": 1786464000,
+      "owned_by": "tabitoken",
+      "provider": "tabitoken"
+    },
+    {
+      "id": "claude-opus-4-8-thinking",
+      "object": "model",
+      "created": 1786464000,
+      "owned_by": "tabitoken",
+      "provider": "tabitoken"
+    },
+    {
+      "id": "claude-opus-5",
+      "object": "model",
+      "created": 1786464000,
+      "owned_by": "tabitoken",
+      "provider": "tabitoken"
+    },
+    {
+      "id": "claude-opus-5-thinking",
+      "object": "model",
+      "created": 1786464000,
+      "owned_by": "tabitoken",
+      "provider": "tabitoken"
+    },
+    {
+      "id": "claude-opus-4-8",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "claude",
+      "provider": "justwoker"
+    },
+    {
+      "id": "claude-opus-4-8-thinking",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "claude",
+      "provider": "justwoker"
+    },
+    {
+      "id": "claude-opus-5",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "claude",
+      "provider": "justwoker"
+    },
+    {
+      "id": "claude-opus-5-thinking",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "claude",
+      "provider": "justwoker"
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "object": "model",
+      "created": 1785481636,
+      "owned_by": "bitdeerai",
+      "provider": "bitdeer"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "object": "model",
+      "created": 1785481636,
+      "owned_by": "bitdeerai",
+      "provider": "bitdeer"
+    },
+    {
+      "id": "composer-2.5",
+      "object": "model",
+      "created": 1789352000,
+      "owned_by": "routeopen",
+      "provider": "hashneuron"
+    },
+    {
+      "id": "grok-4.5",
+      "object": "model",
+      "created": 1789352000,
+      "owned_by": "routeopen",
+      "provider": "hashneuron"
+    },
+    {
+      "id": "grok-4.6",
+      "object": "model",
+      "created": 1789352000,
+      "owned_by": "routeopen",
+      "provider": "hashneuron"
+    },
+    {
+      "id": "z-ai/glm-5.3-free",
+      "object": "model",
+      "created": 1789352000,
+      "owned_by": "routeopen",
+      "provider": "hashneuron"
+    }
+  ]
+}

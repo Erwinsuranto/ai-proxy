@@ -1,0 +1,153 @@
+### ==========================================
+### NVIDIA API → OpenAI Proxy - Contoh Request
+### ==========================================
+### Base URL: http://localhost:3000
+### Gunakan VS Code REST Client extension
+### ==========================================
+
+### Health Check
+GET http://localhost:3000/health
+
+### List Models
+GET http://localhost:3000/v1/models
+Authorization: Bearer anything
+
+### Chat Completion (Non-Streaming)
+POST http://localhost:3000/v1/chat/completions
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "meta/llama-3.3-70b-instruct",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello! Explain what API Proxy does in one sentence."
+    }
+  ],
+  "temperature": 0.7,
+  "max_tokens": 2048,
+  "stream": false
+}
+
+### Chat Completion (Streaming)
+POST http://localhost:3000/v1/chat/completions
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "meta/llama-3.3-70b-instruct",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Count from 1 to 5."
+    }
+  ],
+  "temperature": 0.7,
+  "max_tokens": 512,
+  "stream": true
+}
+
+### Embeddings
+POST http://localhost:3000/v1/embeddings
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "nvidia/nv-embedqa-e5-v5",
+  "input": "Hello world, this is a test embedding request."
+}
+
+### Responses API (Non-Streaming)
+POST http://localhost:3000/v1/responses
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "meta/llama-3.1-8b-instruct",
+  "input": "Explain what API Proxy does in one sentence.",
+  "temperature": 0.7,
+  "max_output_tokens": 2048
+}
+
+### Responses API (Streaming)
+POST http://localhost:3000/v1/responses
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "meta/llama-3.1-8b-instruct",
+  "input": "Count from 1 to 5.",
+  "temperature": 0.7,
+  "max_output_tokens": 512,
+  "stream": true
+}
+
+### Databricks Chat Completion (Non-Streaming)
+POST http://localhost:3000/v1/chat/completions
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "databricks/databricks-meta-llama-3-3-70b-instruct",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello! Explain what API Proxy does in one sentence."
+    }
+  ],
+  "temperature": 0.7,
+  "max_tokens": 2048,
+  "stream": false
+}
+
+### Databricks Chat Completion (Streaming)
+POST http://localhost:3000/v1/chat/completions
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "databricks/databricks-meta-llama-3-3-70b-instruct",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Count from 1 to 5."
+    }
+  ],
+  "temperature": 0.7,
+  "max_tokens": 512,
+  "stream": true
+}
+
+### Responses API with tools
+POST http://localhost:3000/v1/responses
+Content-Type: application/json
+Authorization: Bearer anything
+
+{
+  "model": "meta/llama-3.1-8b-instruct",
+  "input": "What time is it?",
+  "instructions": "You MUST use the get_current_time tool to answer.",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_current_time",
+        "description": "Get the current time",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "format": {
+              "type": "string",
+              "enum": ["iso", "12h", "24h"]
+            }
+          },
+          "required": []
+        }
+      }
+    }
+  ],
+  "tool_choice": "auto",
+  "temperature": 0.01,
+  "max_output_tokens": 500
+}

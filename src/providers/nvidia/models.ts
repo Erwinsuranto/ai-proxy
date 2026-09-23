@@ -1,0 +1,16 @@
+export const MODELS: string[] = [
+  'deepseek-v4-flash',
+  'deepseek-v4-pro',
+  'deepseek-v4-promini',
+  'deepseek-r1',
+  'meta/llama-3.1-8b-instruct',
+  'meta/llama-3.1-70b-instruct',
+  'meta/llama-3.3-70b-instruct',
+  'mistralai/mistral-7b-instruct-v0.3',
+  'mistralai/mistral-medium-3.5-128b',
+  'google/gemma-2-27b-it',
+  'z-ai/glm-5.2',
+  'minimaxai/minimax-m2.7',
+  'nvidia/llama-3.1-nemotron-70b-instruct',
+  'nvidia/nv-embedqa-e5-v5',
+];

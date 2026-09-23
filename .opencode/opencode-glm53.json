@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "nvidia-api": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "NVIDIA API Proxy",
+      "options": {
+        "baseURL": "http://43.153.225.102:3000/v1",
+        "apiKey": "sk-8f1482148d0b85cdefc168ce96bb131387815d00e2fa9db1"
+      },
+      "models": {
+        "glm-5-3-flash": {
+          "name": "GLM 5.3 Flash",
+          "reasoning": true
+        }
+      }
+    }
+  }
+}

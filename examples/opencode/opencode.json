@@ -1,0 +1,1100 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "z2api": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Z2api GLM (via nvidia-api proxy)",
+      "options": {
+        "baseURL": "http://43.153.225.102:3000/v1",
+        "apiKey": "sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc"
+      },
+      "models": {
+        "experientiallabs/glm-5.1": {
+          "name": "GLM 5.1",
+          "reasoning": true
+        },
+        "experientiallabs/glm-5v-turbo": {
+          "name": "GLM 5V Turbo",
+          "reasoning": true
+        }
+      }
+    },
+    "nvidia-api": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "NVIDIA API Proxy",
+      "options": {
+        "baseURL": "http://43.153.225.102:3000/v1",
+        "apiKey": "sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc"
+      },
+      "models": {
+        "deepseek-v4-flash:free": {
+          "name": "DeepSeek V4 Free (Auto)",
+          "reasoning": false
+        },
+        "z-ai/glm-5.3-free": {
+          "name": "GLM 5.3 Free (TokenRouter)",
+          "reasoning": true
+        },
+        "moonshotai/kimi-k3": {
+          "name": "Kimi K3 (NVIDIA)",
+          "reasoning": true
+        },
+        "gmi/MiniMaxAI/MiniMax-M3": {
+          "name": "MiniMax M3 Free (GMI)",
+          "reasoning": true
+        },
+        "gmi/minimax-m2.7": {
+          "name": "MiniMax M2.7 Free (GMI)",
+          "reasoning": true
+        },
+        "hy3:free": {
+          "name": "HY3 Free (Kilo)",
+          "reasoning": true
+        },
+        "hy3-free": {
+          "name": "HY3 Free (Zen)",
+          "reasoning": true
+        },
+        "openrouter/cohere/north-mini-code:free": {
+          "name": "North Mini Code (OR Free)",
+          "reasoning": false
+        },
+        "openrouter/nvidia/nemotron-3.5-lightning:free": {
+          "name": "Nemotron Lightning (OR Free)",
+          "reasoning": false
+        },
+        "openrouter/google/gemma-4-26b-a4b-it:free": {
+          "name": "Gemma 4 26B (OR Free)",
+          "reasoning": false
+        },
+        "openrouter/google/gemma-4-31b-it:free": {
+          "name": "Gemma 4 31B (OR Free)",
+          "reasoning": false
+        },
+        "openrouter/openai/gpt-oss-20b:free": {
+          "name": "GPT-OSS 20B (OR Free)",
+          "reasoning": false
+        },
+        "gorouter/claude-opus-4-8": {
+          "name": "Claude Opus 4.8 (GoRouter)",
+          "reasoning": true
+        },
+        "gorouter/claude-opus-4-8-thinking": {
+          "name": "Claude Opus 4.8 Thinking (GoRouter)",
+          "reasoning": true
+        },
+        "gorouter/claude-opus-5": {
+          "name": "Claude Opus 5 (GoRouter)",
+          "reasoning": true
+        },
+        "tabitoken/claude-opus-4-8": {
+          "name": "Claude Opus 4.8 (TabiToken)",
+          "reasoning": true
+        },
+        "tabitoken/claude-opus-4-8-thinking": {
+          "name": "Claude Opus 4.8 Thinking (TabiToken)",
+          "reasoning": true
+        },
+        "tabitoken/claude-opus-5": {
+          "name": "Claude Opus 5 (TabiToken)",
+          "reasoning": true
+        },
+        "tabitoken/claude-opus-5-thinking": {
+          "name": "Claude Opus 5 Thinking (TabiToken)",
+          "reasoning": true
+        },
+        "tokenharbor/mimo-v2.5:free": {
+          "name": "Mimo V2.5 Free (TH)",
+          "reasoning": true
+        },
+        "tokenharbor/deepseek-v4-flash:free": {
+          "name": "DeepSeek V4 Free (TH)",
+          "reasoning": true
+        },
+        "tokenharbor/deepseek-v4.1-flash:free": {
+          "name": "DeepSeek V4.1 Flash Free (TH)",
+          "reasoning": true
+        },
+        "tokenharbor/qwen3.8-27b:free": {
+          "name": "Qwen 3.8 27B Free (TH)",
+          "reasoning": true
+        },
+        "logfare/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (Logfare)",
+          "reasoning": true
+        },
+        "logfare/qwen-3.6-35b-a3b": {
+          "name": "Qwen 3.6 35B (Logfare)",
+          "reasoning": true
+        },
+        "nvidia/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (NVIDIA)",
+          "reasoning": true
+        },
+        "nvidia/z-ai/glm-5.2": {
+          "name": "GLM 5.2 (NVIDIA)",
+          "reasoning": true
+        },
+        "bai/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (BAI) - Free",
+          "reasoning": true
+        },
+        "bai/qwen3.8-flash": {
+          "name": "Qwen 3.8 Flash (BAI) - Free",
+          "reasoning": true
+        },
+        "bai/hy3": {
+          "name": "HY3 (BAI) - Free",
+          "reasoning": true
+        },
+        "bai/glm-5.3-flash": {
+          "name": "GLM 5.3 Flash (BAI) - Free",
+          "reasoning": true
+        },
+        "zen/deepseek-v4-flash-free": {
+          "name": "DeepSeek V4 Free (Zen)",
+          "reasoning": true
+        },
+        "x-preview-f-free": {
+          "name": "Ox Alpha",
+          "reasoning": true
+        },
+        "muse-glimmer-30b": {
+          "name": "Muse Glimmer 30B (Zen)",
+          "reasoning": false
+        },
+        "meta/muse-glimmer-30b": {
+          "name": "Muse Glimmer 30B (Zen)",
+          "reasoning": false
+        },
+        "muse-spark-1.2-contributor-free": {
+          "name": "Muse Spark 1.2 Free (Zen)",
+          "reasoning": true
+        },
+        "muse-spark-1.2": {
+          "name": "Muse Spark 1.2 (Zen)",
+          "reasoning": true
+        },
+        "mimo-v2.5-free": {
+          "name": "Mimo V2.5 Free (Zen)",
+          "reasoning": true
+        },
+        "big-pickle": {
+          "name": "Big Pickle (Zen)",
+          "reasoning": true
+        },
+        "laguna-s-2.1-free": {
+          "name": "Laguna S 2.1 Free (Zen)",
+          "reasoning": false
+        },
+        "nemotron-3-ultra-free": {
+          "name": "Nemotron 3 Ultra Free (Zen)",
+          "reasoning": true
+        },
+        "nemotron-3.5-lightning-free": {
+          "name": "Nemotron 3.5 Lightning Free (Zen)",
+          "reasoning": true
+        },
+        "muse-spark-1.3-contributor-free": {
+          "name": "Muse Spark 1.3 Free (Zen)",
+          "reasoning": true
+        },
+        "ling-3.0-flash-fin-free": {
+          "name": "Ling 3.0 Flash Fin Free (Zen)",
+          "reasoning": false
+        },
+        "kiosapi/Qwen/Qwen3.8-27B": {
+          "name": "Qwen 3.8 27B (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/agnes-2.0-flash": {
+          "name": "Agnes 2.0 Flash (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/agnes-2.5-flash": {
+          "name": "Agnes 2.5 Flash (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/deepseek-ai/DeepSeek-V4-Flash": {
+          "name": "DeepSeek V4 Flash (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/glm-5.2": {
+          "name": "GLM 5.2 (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/glm-5.3": {
+          "name": "GLM 5.3 (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/glm-5.3-flash": {
+          "name": "GLM 5.3 Flash (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/grok-4.5": {
+          "name": "Grok 4.5 (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/grok-4.6": {
+          "name": "Grok 4.6 (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/grok-composer-2.5-fast": {
+          "name": "Grok Composer 2.5 Fast (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/hy3": {
+          "name": "HY3 (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/minimaxai/minimax-m3": {
+          "name": "MiniMax M3 (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/moonshotai/kimi-k3": {
+          "name": "Kimi K3 (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/nvidia/nemotron-3-super-120b-a12b": {
+          "name": "Nemotron 3 Super (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/oc/big-pickle": {
+          "name": "Big Pickle (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/oc/mimo-v2.5": {
+          "name": "Mimo V2.5 (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/oc/muse-spark-1.2-contributor": {
+          "name": "Muse Spark 1.2 (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/oc/nemotron-3-ultra": {
+          "name": "Nemotron 3 Ultra (KiosAPI)",
+          "reasoning": false
+        },
+        "kiosapi/openai/gpt-oss-20b": {
+          "name": "GPT OSS 20B (KiosAPI)",
+          "reasoning": true
+        },
+        "kiosapi/qwen3.8-flash": {
+          "name": "Qwen 3.8 Flash (KiosAPI)",
+          "reasoning": false
+        },
+        "teamorouter/deepseek-v4-flash-free": {
+          "name": "DeepSeek V4 Free (TeamoRouter)",
+          "reasoning": true
+        },
+        "teamorouter/deepseek-v4-pro-free": {
+          "name": "DeepSeek V4 Pro Free (TeamoRouter)",
+          "reasoning": true
+        },
+        "teamorouter/gpt-5.4-mini": {
+          "name": "GPT-5.4 Mini (TeamoRouter)",
+          "reasoning": false
+        },
+        "unli/unli-auto": {
+          "name": "UNLI Auto",
+          "reasoning": true
+        },
+        "unli/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (UNLI)",
+          "reasoning": true
+        },
+        "unli/deepseek-v4-flash-free": {
+          "name": "DeepSeek V4 Free (UNLI)",
+          "reasoning": true
+        },
+        "unli/deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro (UNLI)",
+          "reasoning": true
+        },
+        "unli/deepseek-chat": {
+          "name": "DeepSeek Chat (UNLI)",
+          "reasoning": true
+        },
+        "unli/gpt-4.1": {
+          "name": "GPT-4.1 (UNLI)",
+          "reasoning": false
+        },
+        "unli/gpt-4o": {
+          "name": "GPT-4o (UNLI)",
+          "reasoning": false
+        },
+        "unli/claude-opus-4": {
+          "name": "Claude Opus 4 (UNLI)",
+          "reasoning": true
+        },
+        "unli/claude-sonnet-4": {
+          "name": "Claude Sonnet 4 (UNLI)",
+          "reasoning": true
+        },
+        "unli/gemini-3-flash": {
+          "name": "Gemini 3 Flash (UNLI)",
+          "reasoning": false
+        },
+        "unli/glm-5.3": {
+          "name": "GLM 5.3 (UNLI)",
+          "reasoning": true
+        },
+        "unli/glm-5.2": {
+          "name": "GLM 5.2 (UNLI)",
+          "reasoning": true
+        },
+        "llm7/DeepSeek-V4-Flash-0731": {
+          "name": "DeepSeek V4 Flash 0731 (LLM7)",
+          "reasoning": true
+        },
+        "bazaarlink/auto:free": {
+          "name": "Auto Free (BazaarLink)",
+          "reasoning": true
+        },
+        "bazaarlink/deepseek/deepseek-v4-flash:free": {
+          "name": "DeepSeek V4 Free (BazaarLink)",
+          "reasoning": true
+        },
+        "bazaarlink/qwen/qwen3.7-flash:free": {
+          "name": "Qwen 3.7 Flash Free (BazaarLink)",
+          "reasoning": false
+        },
+        "orcarouter/deepseek-v4-flash-free": {
+          "name": "DeepSeek V4 Flash Free (OrcaRouter)",
+          "reasoning": true
+        },
+        "orcarouter/deepseek-v4-pro-free": {
+          "name": "DeepSeek V4 Pro Free (OrcaRouter)",
+          "reasoning": true
+        },
+        "orcarouter/qwen3.8-27b-free": {
+          "name": "Qwen 3.8 27B Free (OrcaRouter)",
+          "reasoning": false
+        },
+        "orcarouter/free": {
+          "name": "Auto Free (OrcaRouter)",
+          "reasoning": true
+        },
+        "freebuff/mimo/mimo-v2.5": {
+          "name": "Mimo V2.5 (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/minimax/minimax-m3": {
+          "name": "MiniMax M3 (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/openai/gpt-5.6-luna": {
+          "name": "GPT-5.6 Luna (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/deepseek/deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/deepseek/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/z-ai/glm-5.2": {
+          "name": "GLM 5.2 (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/crof/kimi-k3-eco": {
+          "name": "Kimi K3 Eco (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/anthropic/claude-fable-5": {
+          "name": "Claude Fable 5 (Freebuff)",
+          "reasoning": true
+        },
+        "freebuff/meta/muse-spark-1.2-contributor": {
+          "name": "Muse Spark 1.2 (Freebuff)",
+          "reasoning": true
+        },
+        "vyceai/claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6 (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/gpt-5.6-luna": {
+          "name": "GPT-5.6 Luna (VyceAI) - 0.74s fastest",
+          "reasoning": false
+        },
+        "vyceai/gpt-5.6-new": {
+          "name": "GPT-5.6 New (VyceAI)",
+          "reasoning": false
+        },
+        "vyceai/gpt-5.6-luna-testing": {
+          "name": "GPT-5.6 Luna Testing (VyceAI)",
+          "reasoning": false
+        },
+        "vyceai/claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5 (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/claude-opus-5": {
+          "name": "Claude Opus 5 (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/grok-4.5": {
+          "name": "Grok 4.5 (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/grok-4.6": {
+          "name": "Grok 4.6 (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/mimo-v2.5-pro-premium": {
+          "name": "Mimo V2.5 Pro Premium (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/deepseek-v4-flash-lr": {
+          "name": "DeepSeek V4 Flash LR (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/deepseek-v4.1": {
+          "name": "DeepSeek V4.1 (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/agnes-3.0-flash": {
+          "name": "Agnes 3.0 Flash (VyceAI)",
+          "reasoning": false
+        },
+        "vyceai/gemini-3.1-flash-lite": {
+          "name": "Gemini 3.1 Flash Lite (VyceAI)",
+          "reasoning": false
+        },
+        "vyceai/gemini-3.6-flash": {
+          "name": "Gemini 3.6 Flash (VyceAI)",
+          "reasoning": false
+        },
+        "vyceai/nemotron-ultra-550b": {
+          "name": "Nemotron Ultra 550B (VyceAI)",
+          "reasoning": true
+        },
+        "vyceai/nemotron-vision": {
+          "name": "Nemotron Vision (VyceAI)",
+          "reasoning": true
+        },
+        "tokenrouter/deepseek/deepseek-v4-pro-0813-free": {
+          "name": "DeepSeek V4 Pro 0813 Free (TokenRouter)",
+          "reasoning": true
+        },
+        "tokenrouter/qwen/qwen3.8-max-free": {
+          "name": "Qwen 3.8 Max Free (TokenRouter)",
+          "reasoning": false
+        },
+        "cline/deepseek/deepseek-chat": {
+          "name": "DeepSeek Chat (Cline Free)",
+          "reasoning": true
+        },
+        "cline/openai/gpt-4o": {
+          "name": "GPT-4o (Cline Free)",
+          "reasoning": false
+        },
+        "cline/google/gemini-2.5-pro": {
+          "name": "Gemini 2.5 Pro (Cline Free)",
+          "reasoning": false
+        },
+        "cline/minimax/minimax-m2.5": {
+          "name": "MiniMax M2.5 (Cline Free)",
+          "reasoning": true
+        },
+        "cline/anthropic/claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6 (Cline Free)",
+          "reasoning": true
+        },
+        "cline/z-ai/glm-5.3-flash": {
+          "name": "GLM 5.3 Flash (Cline Free)",
+          "reasoning": true
+        },
+        "cline/deepseek/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (Cline Free)",
+          "reasoning": true
+        },
+        "cline/cohere/north-mini-code:free": {
+          "name": "North Mini Code (Cline Free)",
+          "reasoning": false
+        },
+        "cline/dots-studio/dots-3-note-preview:free": {
+          "name": "Dots 3 Note Preview (Cline Free)",
+          "reasoning": false
+        },
+        "cline/google/gemma-4-26b-a4b-it:free": {
+          "name": "Gemma 4 26B A4B (Cline Free)",
+          "reasoning": false
+        },
+        "cline/google/gemma-4-31b-it:free": {
+          "name": "Gemma 4 31B (Cline Free)",
+          "reasoning": false
+        },
+        "cline/inclusionai/ling-3.0-flash-fin:free": {
+          "name": "Ling 3.0 Flash Fin (Cline Free)",
+          "reasoning": false
+        },
+        "cline/inclusionai/ling-3.0-flash-sante:free": {
+          "name": "Ling 3.0 Flash Sante (Cline Free)",
+          "reasoning": false
+        },
+        "cline/liquid/lfm-2.5-2.6b:free": {
+          "name": "LFM 2.5 2.6B (Cline Free)",
+          "reasoning": false
+        },
+        "cline/nex-agi/nex-n2.5-mini:free": {
+          "name": "Nex N2.5 Mini (Cline Free)",
+          "reasoning": false
+        },
+        "cline/nex-agi/nex-n2.5-pro:free": {
+          "name": "Nex N2.5 Pro (Cline Free)",
+          "reasoning": false
+        },
+        "cline/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+          "name": "Nemotron 3 Nano Omni 30B (Cline Free)",
+          "reasoning": true
+        },
+        "cline/nvidia/nemotron-3-super-120b-a12b:free": {
+          "name": "Nemotron 3 Super 120B (Cline Free)",
+          "reasoning": true
+        },
+        "cline/nvidia/nemotron-3-ultra-550b-a55b:free": {
+          "name": "Nemotron 3 Ultra 550B (Cline Free)",
+          "reasoning": true
+        },
+        "cline/nvidia/nemotron-3.5-content-safety:free": {
+          "name": "Nemotron 3.5 Content Safety (Cline Free)",
+          "reasoning": false
+        },
+        "cline/nvidia/nemotron-3.5-lightning:free": {
+          "name": "Nemotron 3.5 Lightning (Cline Free)",
+          "reasoning": true
+        },
+        "cline/poolside/laguna-s-2.1:free": {
+          "name": "Laguna S 2.1 (Cline Free)",
+          "reasoning": false
+        },
+        "cline/thinkingmachines/inkling:free": {
+          "name": "Inkling (Cline Free)",
+          "reasoning": false
+        },
+        "cline/thinkingmachines/inkling-small:free": {
+          "name": "Inkling Small (Cline Free)",
+          "reasoning": false
+        },
+        "deepseek/deepseek-chat": {
+          "name": "DeepSeek Chat (Cline)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2.5": {
+          "name": "MiniMax M2.5 (Cline)",
+          "reasoning": true
+        },
+        "openai/gpt-4o": {
+          "name": "GPT-4o (Cline)",
+          "reasoning": false
+        },
+        "google/gemini-2.5-pro": {
+          "name": "Gemini 2.5 Pro (Cline)",
+          "reasoning": false
+        },
+        "anthropic/claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6 (Cline)",
+          "reasoning": true
+        },
+        "seekai/gpt-5-5": {
+          "name": "GPT-5.5 (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gpt-5.6": {
+          "name": "GPT-5.6 (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gpt-5.6-sol": {
+          "name": "GPT-5.6 Sol (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gpt-5-4": {
+          "name": "GPT-5.4 (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gpt-5-6-terra": {
+          "name": "GPT-5.6 Terra (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gpt-5-6-luna": {
+          "name": "GPT-5.6 Luna (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gemini-3-flash": {
+          "name": "Gemini 3 Flash (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gemini-3-pro": {
+          "name": "Gemini 3 Pro (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/gemini-3-1-pro": {
+          "name": "Gemini 3.1 Pro (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/claude-opus-4-7": {
+          "name": "Claude Opus 4.7 (SeekAI)",
+          "reasoning": true
+        },
+        "seekai/claude-opus-4-8": {
+          "name": "Claude Opus 4.8 (SeekAI)",
+          "reasoning": true
+        },
+        "seekai/claude-opus-5": {
+          "name": "Claude Opus 5 (SeekAI)",
+          "reasoning": true
+        },
+        "seekai/claude-sonnet-5": {
+          "name": "Claude Sonnet 5 (SeekAI)",
+          "reasoning": true
+        },
+        "seekai/claude-fable-5": {
+          "name": "Claude Fable 5 (SeekAI)",
+          "reasoning": true
+        },
+        "seekai/deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro (SeekAI)",
+          "reasoning": true
+        },
+        "seekai/deepseek-v4-pro-0813": {
+          "name": "DeepSeek V4 Pro 0813 (SeekAI)",
+          "reasoning": true
+        },
+        "seekai/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/DeepSeek-V4-Flash-0731": {
+          "name": "DeepSeek V4 Flash 0731 (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/glm-5-2": {
+          "name": "GLM 5.2 (SeekAI)",
+          "reasoning": false
+        },
+        "seekai/grok-4-5": {
+          "name": "Grok 4.5 (SeekAI)",
+          "reasoning": false
+        },
+        "codepus/glm-5.2": {
+          "name": "GLM 5.2 (Codepus)",
+          "reasoning": true
+        },
+        "tokenforge/claude-opus-5": {
+          "name": "Claude Opus 5 (TokenForge)",
+          "reasoning": true
+        },
+        "atria/Atria-Dawn-Preview": {
+          "name": "Atria Dawn Preview (Atria)",
+          "reasoning": true
+        },
+        "codecraftapi/muse-spark-1.1": {
+          "name": "Muse Spark 1.1 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gemma-2-2b": {
+          "name": "Gemma 2 2B (CodeCraft)",
+          "reasoning": false
+        },
+        "codecraftapi/gpt-5.6-sol": {
+          "name": "GPT-5.6 Sol (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/claude-opus-5": {
+          "name": "Claude Opus 5 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/claude-fable-5": {
+          "name": "Claude Fable 5 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/claude-mythos-preview": {
+          "name": "Claude Mythos Preview (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/kimi-k3": {
+          "name": "Kimi K3 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/glm-5.3": {
+          "name": "GLM 5.3 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/deepseek-v4-pro-0813": {
+          "name": "DeepSeek V4 Pro 0813 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/qwen3.8-max": {
+          "name": "Qwen 3.8 Max (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gpt-5.6-terra": {
+          "name": "GPT-5.6 Terra (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/claude-opus-4.8": {
+          "name": "Claude Opus 4.8 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gemini-3.7-flash": {
+          "name": "Gemini 3.7 Flash (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/claude-sonnet-5": {
+          "name": "Claude Sonnet 5 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gpt-5.5": {
+          "name": "GPT-5.5 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/grok-4.5": {
+          "name": "Grok 4.5 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/deepseek-v4-flash-0731": {
+          "name": "DeepSeek V4 Flash 0731 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/grok-4.6": {
+          "name": "Grok 4.6 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/seed-2.1-pro": {
+          "name": "Seed 2.1 Pro (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/glm-5.2": {
+          "name": "GLM 5.2 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/qwen3.8-27b": {
+          "name": "Qwen 3.8 27B (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gpt-5.6-luna": {
+          "name": "GPT-5.6 Luna (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/qwen3.7-max": {
+          "name": "Qwen 3.7 Max (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/claude-opus-4.6": {
+          "name": "Claude Opus 4.6 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gpt-5.5-pro": {
+          "name": "GPT-5.5 Pro (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/claude-opus-4.7": {
+          "name": "Claude Opus 4.7 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gemini-3.6-flash": {
+          "name": "Gemini 3.6 Flash (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/kimi-k2.6": {
+          "name": "Kimi K2.6 (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/seed-2.1-turbo": {
+          "name": "Seed 2.1 Turbo (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/gemini-3.1-pro": {
+          "name": "Gemini 3.1 Pro (CodeCraft)",
+          "reasoning": true
+        },
+        "codecraftapi/deepseek-v4-pro-max": {
+          "name": "DeepSeek V4 Pro Max (CodeCraft)",
+          "reasoning": true
+        },
+        "kie.ai/gpt-6-astra": {
+          "name": "GPT-6 Astra (Kie)",
+          "reasoning": true
+        },
+        "kie.ai/gpt-5-6-sol": {
+          "name": "GPT-5.6 Sol (Kie)",
+          "reasoning": true
+        },
+        "kie.ai/gpt-5-6-terra": {
+          "name": "GPT-5.6 Terra (Kie)",
+          "reasoning": true
+        },
+        "kie.ai/gpt-5-6-luna": {
+          "name": "GPT-5.6 Luna (Kie)",
+          "reasoning": true
+        },
+        "kie.ai/gpt-5-5": {
+          "name": "GPT-5.5 (Kie)",
+          "reasoning": true
+        },
+        "kie.ai/gpt-5-4": {
+          "name": "GPT-5.4 (Kie)",
+          "reasoning": true
+        }
+      }
+    },
+    "justwoker": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Justwoker (via nvidia-api proxy)",
+      "options": {
+        "baseURL": "http://43.153.225.102:3000/v1",
+        "apiKey": "sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc"
+      },
+      "models": {
+        "justwoker/claude-opus-4-8": {
+          "name": "Claude Opus 4.8 (Justwoker)",
+          "reasoning": true
+        },
+        "justwoker/claude-opus-4-8-thinking": {
+          "name": "Claude Opus 4.8 Thinking (Justwoker)",
+          "reasoning": true
+        },
+        "justwoker/claude-opus-5": {
+          "name": "Claude Opus 5 (Justwoker)",
+          "reasoning": true
+        },
+        "justwoker/claude-opus-5-thinking": {
+          "name": "Claude Opus 5 Thinking (Justwoker)",
+          "reasoning": true
+        }
+      }
+    },
+    "xkiro": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Xkiro (via nvidia-api proxy)",
+      "options": {
+        "baseURL": "http://43.153.225.102:3000/v1",
+        "apiKey": "sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc"
+      },
+      "models": {
+        "deepseek/deepseek-chat-v3.1": {
+          "name": "DeepSeek V3.1 (Xkiro Free)",
+          "reasoning": true
+        },
+        "deepseek/deepseek-v3.2": {
+          "name": "DeepSeek V3.2 (Xkiro Free)",
+          "reasoning": true
+        },
+        "deepseek/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (Xkiro Free)",
+          "reasoning": true
+        },
+        "deepseek/deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2.1-highspeed:free": {
+          "name": "MiniMax M2.1 Highspeed (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2.1:free": {
+          "name": "MiniMax M2.1 (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2.5-highspeed:free": {
+          "name": "MiniMax M2.5 Highspeed (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2.5:free": {
+          "name": "MiniMax M2.5 (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2.7-highspeed:free": {
+          "name": "MiniMax M2.7 Highspeed (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2.7:free": {
+          "name": "MiniMax M2.7 (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m2:free": {
+          "name": "MiniMax M2 (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "minimax/minimax-m3:free": {
+          "name": "MiniMax M3 (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "mistralai/codestral-2508": {
+          "name": "Codestral (Xkiro Free)",
+          "reasoning": false
+        },
+        "mistralai/devstral-medium": {
+          "name": "Devstral 2 (Xkiro Free)",
+          "reasoning": false
+        },
+        "mistralai/ministral-14b": {
+          "name": "Ministral 3 14B (Xkiro Free)",
+          "reasoning": false
+        },
+        "mistralai/ministral-3b": {
+          "name": "Ministral 3 3B (Xkiro Free)",
+          "reasoning": false
+        },
+        "mistralai/ministral-8b": {
+          "name": "Ministral 3 8B (Xkiro Free)",
+          "reasoning": false
+        },
+        "mistralai/mistral-large-2512": {
+          "name": "Mistral Large 3 (Xkiro Free)",
+          "reasoning": false
+        },
+        "mistralai/mistral-medium-3.5": {
+          "name": "Mistral Medium 3.5 (Xkiro Free)",
+          "reasoning": true
+        },
+        "mistralai/mistral-small-2603": {
+          "name": "Mistral Small 4 (Xkiro Free)",
+          "reasoning": true
+        },
+        "openai/gpt-5.3-codex-spark": {
+          "name": "Codex 5.3 Spark (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen-plus-2025-07-28:free": {
+          "name": "Qwen Plus 0728 (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3-coder-plus:free": {
+          "name": "Qwen3 Coder Plus (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3-max:free": {
+          "name": "Qwen3 Max (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3-omni-flash:free": {
+          "name": "Qwen3 Omni Flash (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3-vl-plus:free": {
+          "name": "Qwen3 VL Plus (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.5-397b-a17b:free": {
+          "name": "Qwen3.5 397B A17B (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.5-flash:free": {
+          "name": "Qwen3.5 Flash (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.5-omni-flash:free": {
+          "name": "Qwen3.5 Omni Flash (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.5-omni-plus:free": {
+          "name": "Qwen3.5 Omni Plus (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.5-plus:free": {
+          "name": "Qwen3.5 Plus (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.6-27b:free": {
+          "name": "Qwen3.6 27B (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.6-35b-a3b:free": {
+          "name": "Qwen3.6 35B A3B (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.6-max-preview:free": {
+          "name": "Qwen3.6 Max Preview (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.6-plus:free": {
+          "name": "Qwen3.6 Plus (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.7-max:free": {
+          "name": "Qwen3.7 Max (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.7-plus:free": {
+          "name": "Qwen3.7 Plus (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "qwen/qwen3.8-max:free": {
+          "name": "Qwen3.8 Max (Free) (Xkiro Free)",
+          "reasoning": true
+        },
+        "sensenova/sensenova-6.7-flash-lite": {
+          "name": "SenseNova 6.7 Flash-Lite (Xkiro Free)",
+          "reasoning": true
+        },
+        "sensenova/sensenova-6.8-flash-lite": {
+          "name": "SenseNova 6.8 Flash-Lite (Xkiro Free)",
+          "reasoning": true
+        }
+      }
+    },
+    "kktoken": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "KKToken (via nvidia-api proxy)",
+      "options": {
+        "baseURL": "http://43.153.225.102:3000/v1",
+        "apiKey": "sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc"
+      },
+      "models": {
+        "kktoken/claude-opus-4-8": {
+          "name": "claude-opus-4-8 (KKToken)",
+          "reasoning": true
+        },
+        "kktoken/claude-opus-4-8-thinking": {
+          "name": "claude-opus-4-8-thinking (KKToken)",
+          "reasoning": true
+        },
+        "kktoken/claude-opus-5": {
+          "name": "claude-opus-5 (KKToken)",
+          "reasoning": true
+        },
+        "kktoken/claude-opus-5-thinking": {
+          "name": "claude-opus-5-thinking (KKToken)",
+          "reasoning": true
+        }
+      }
+    },
+    "experientiallabs": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "ExperientialLabs (via nvidia-api)",
+      "options": {
+        "baseURL": "http://43.153.225.102:3000/v1",
+        "apiKey": "sk-c299c0ad215fa2b47f62385bc3ee73a8ade6e828ec4c6efc"
+      },
+      "models": {
+        "qwen3.8-27b": {
+          "name": "Qwen 3.8 27B"
+        },
+        "deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash"
+        },
+        "gpt-5.6-luna": {
+          "name": "GPT 5.6 Luna"
+        },
+        "gpt-6-astra": {
+          "name": "GPT 6 Astra"
+        },
+        "claude-fable-5.1": {
+          "name": "Claude Fable 5.1"
+        }
+      }
+    }
+  }
+}

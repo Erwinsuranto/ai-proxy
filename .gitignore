@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+*.log
+config/provider-state.json
+config/usage-records.json
+config/provider-api-keys.json
+config/client-api-keys.json
+config/combos.json
+config/model-pricing.json
+config/provider-refresh-cooldown-state.json
+config/backups/

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "meta/llama-3.3-70b-instruct",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "meta",
+    "provider": "nvidia"
+  },
+  {
+    "id": "mistralai/mistral-large-2-instruct",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "mistralai",
+    "provider": "nvidia"
+  },
+  {
+    "id": "nvidia/llama-3.1-nemotron-70b-instruct",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "nvidia",
+    "provider": "nvidia"
+  },
+  {
+    "id": "google/gemma-2-27b-it",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "google",
+    "provider": "nvidia"
+  },
+  {
+    "id": "nvidia/nv-embedqa-e5-v5",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "nvidia",
+    "provider": "nvidia"
+  },
+  {
+    "id": "poolside/laguna-s-2.1:free",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "openrouter",
+    "provider": "nvidia-openrouter"
+  },
+  {
+    "id": "cohere/north-mini-code:free",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "openrouter",
+    "provider": "nvidia-openrouter"
+  },
+  {
+    "id": "openai/gpt-oss-20b:free",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "openrouter",
+    "provider": "nvidia-openrouter"
+  },
+  {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "openrouter",
+    "provider": "nvidia-openrouter"
+  },
+  {
+    "id": "step-3.7-flash",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "stepfun",
+    "provider": "nvidia-stepfun"
+  },
+  {
+    "id": "step-2-16k-nightly",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "stepfun",
+    "provider": "nvidia-stepfun"
+  },
+  {
+    "id": "step-1-8k",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "stepfun",
+    "provider": "nvidia-stepfun"
+  },
+  {
+    "id": "step-1-32k",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "stepfun",
+    "provider": "nvidia-stepfun"
+  },
+  {
+    "id": "step-1-flash",
+    "object": "model",
+    "created": 1735689600,
+    "owned_by": "stepfun",
+    "provider": "nvidia-stepfun"
+  }
+]
